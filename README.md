@@ -136,7 +136,8 @@ src
 
 #### ERD Model
 
-![Screenshot from 2021-08-25 09-26-16](https://user-images.githubusercontent.com/85084394/130809102-ff655840-7a82-4aec-9c4a-2ec030f44a15.png)
+![Screenshot from 2021-08-25 12-30-19](https://user-images.githubusercontent.com/85084394/130837723-52b43c39-8ac2-4264-80a2-1458a255f9c0.png)
+
 
 
 <br>
