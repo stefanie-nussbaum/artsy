@@ -19,24 +19,24 @@
 
 ## Overview
 
-_**Artsy** is an app/website made for finding, buying, and selling various types of art. Users will be able to Upload, edit, and delete their own creations as well as search for and favorite other users' art. Artsy is inspired by the popular art commerce app Etsy.
+_**Artsy** is an app/website made for finding, buying, and selling various types of art. Users will be able to Upload, edit, and delete their own creations as well as search for and favorite other users' art. Artsy is inspired by the popular art commerce app Etsy._
 
 
 <br>
 
 ## MVP
 
-_The **Artsy** MVP will include full CRUD functionality of at least one table on both the front and back end. Tables in the databse will have at least one association between them. There should be at least 8 separate views/components to keep the code organized and easy to read.  _
+_The **Artsy** MVP will include full CRUD functionality of at least one table on both the front and back end. Tables in the databse will have at least one association between them. There should be at least 8 separate views/components to keep the code organized and easy to read._
 
 <br>
 
 ### Goals
 
-- _Full CRUD on products_
-- _Many organized front end components and views_
+- _Full CRUD on products in backend._
+- _Many organized front end components and views._
 - _Full CRUD functionality for users to create, read, update, and delete products._
-- _Use flexbox or grid and 2 media queries in css styling_
-- _etc._
+- _Use flexbox or grid and 2 media queries in css styling._
+
 
 <br>
 
@@ -112,10 +112,12 @@ src
 | Login view |    H     |     1 hrs      |      hrs     |     TBD     |
 | Layout/Navbar/Footer    |    H     |     3 hrs      |      hrs     |    TBD    |
 | Basic CSS styling    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Style products display    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Style product details    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Style layout    |    H     |     2 hrs      |      hrs     |    TBD    |
-| TOTAL               |          |     6 hrs      |      hrs     |     TBD     |
+| Style products display    |    M     |     3 hrs      |      hrs     |    TBD    |
+| Style product details    |    M     |     3 hrs      |      hrs     |    TBD    |
+| Style layout    |    M     |     2 hrs      |      hrs     |    TBD    |
+| PMVP favorites    |    L     |     3 hrs      |      hrs     |    TBD    |
+| PMVP dark/light mode    |    L     |     3 hrs      |      hrs     |    TBD    |
+| TOTAL               |          |     43 hrs      |      hrs     |     TBD     |
 
 
 <br>
@@ -135,7 +137,7 @@ src
 - _User authentication_
 - _Users will have the ability to favorite items to come back to view later_
 - _Both light and dark mode_
-- 
+
 ***
 
 ## Code Showcase
