@@ -58,7 +58,17 @@ _The **Artsy** MVP will include full CRUD functionality of at least one table on
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+Mobile Views:
+![Screenshot from 2021-08-24 23-23-28](https://user-images.githubusercontent.com/85084394/130726563-d36c04cb-90e5-4d71-9b5d-1bc7688db1d3.png)
+![Screenshot from 2021-08-24 23-24-17](https://user-images.githubusercontent.com/85084394/130726571-46a3571c-24f7-46bc-8a04-c98541235bfb.png)
+![Screenshot from 2021-08-24 23-24-26](https://user-images.githubusercontent.com/85084394/130726575-002cf261-66a0-45ff-86d1-3cd517ce1891.png)
+Desktop Products:
+![Screenshot from 2021-08-24 23-24-01](https://user-images.githubusercontent.com/85084394/130726586-ac7afbec-111c-48d6-a381-365d5dd90eab.png)
+Desktop Product Details:
+![Screenshot from 2021-08-24 23-26-33](https://user-images.githubusercontent.com/85084394/130726592-21ca2132-1580-471a-ba07-3f764728d7af.png)
+Desktop Create/Edit Product:
+![Screenshot from 2021-08-24 23-24-45](https://user-images.githubusercontent.com/85084394/130726598-6cab14ec-b193-49c0-8805-fbf3431bc7e6.png)
+
 
 
 
