@@ -23,4 +23,10 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
+
+  # #find a category here?
+  # def find_category
+
+  # end
+
 end

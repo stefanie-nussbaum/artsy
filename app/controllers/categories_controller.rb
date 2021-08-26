@@ -1,16 +1,24 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: :show
+  before_action :set_category, only: [:show, :add_to_product]
 
   # GET /categories
-  # def index
-  #   @categories = Category.all
+  def index
+    @categories = Category.all
 
-  #   render json: @categories
-  # end
+    render json: @categories
+  end
 
   # GET /categories/1
   def show
     render json: @category
+  end
+
+  # GET /products/1/categories/2
+  def add_to_product
+    @product = Product.find(params[:product_id])
+    @product.category = @category
+
+    render json: @food, include: :categories
   end
 
   # POST /categories
