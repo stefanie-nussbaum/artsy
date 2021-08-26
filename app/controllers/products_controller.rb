@@ -47,12 +47,13 @@ class ProductsController < ApplicationController
     end
 
     def set_category
-      @category = Category.find()
+      @category = Category.where(request.body.category = :id)
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
       # @category = Category.find_by(request.body.category)
-      params.require(:product).permit(:name, :description, :price, :img_url, Category.find(:category).id)
+      # set_category
+      params.require(:product).permit(:name, :description, :price, :img_url, :category_id)
     end
 end

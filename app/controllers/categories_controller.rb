@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :add_to_product]
+  before_action :set_category, only: [:show, :show_category_products]
 
   # GET /categories
   def index
@@ -13,12 +13,11 @@ class CategoriesController < ApplicationController
     render json: @category
   end
 
-  # GET /products/1/categories/2
-  def add_to_product
-    @product = Product.find(params[:product_id])
-    @product.category = @category
+  # GET /categories/1/products
+  def show_category_products
+    @products = Product.all.select{|product| product[:category_id] = @category.id}
 
-    render json: @food, include: :categories
+    render json: @products, include: :categories
   end
 
   # POST /categories
@@ -49,7 +48,7 @@ class CategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
-      @category = Category.find(params[:id])
+      @category = Category.find(params[:category_id])
     end
 
     # Only allow a list of trusted parameters through.
