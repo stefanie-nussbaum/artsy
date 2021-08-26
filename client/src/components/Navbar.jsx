@@ -1,9 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const { currentUser } = props
   return (
     <div>
-      Navbar
+      {currentUser ? (
+        <div>
+          <p>{currentUser.username}</p>
+
+        </div>
+      ) : (
+        <Link to='/login'>Login/Register</Link>
+      )}
     </div>
   )
 }
