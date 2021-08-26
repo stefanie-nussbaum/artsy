@@ -13,8 +13,8 @@ function App() {
 
   useEffect(() => {
     const handleVerify = async () => {
-      const userData = await verifyUser()
-      setCurrentUser(userData)
+      setCurrentUser(await verifyUser())
+      console.log(currentUser) 
     }
     handleVerify()
   }, [])
@@ -49,7 +49,7 @@ function App() {
             <Register handleRegister={handleRegister} />
           </Route>
           <Route path='/'>
-            <MainContainer />
+            <MainContainer currentUser={currentUser}/>
           </Route>
         </Switch>
       </Layout>
