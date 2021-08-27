@@ -7,8 +7,8 @@ export default function Navbar(props) {
     <div>
       {currentUser ? (
         <div>
-          <p>{currentUser.username}</p>
-          <p>Create Product</p>
+          <Link to={`/users/${currentUser?.id}/products`}>{currentUser.username}</Link>
+          <Link to='products/create'>Create Product</Link>
         </div>
       ) : (
         <Link to='/login'>Login/Register</Link>

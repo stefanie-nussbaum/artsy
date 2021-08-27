@@ -5,6 +5,7 @@ import Products from '../screens/Products'
 import { getAllProducts, postProduct } from '../services/products'
 import CreateProduct from '../screens/CreateProduct'
 import EditProduct from '../screens/EditProduct'
+import UserProfile from '../screens/UserProfile'
 
 export default function MainContainer(props) {
   const [products, setProducts] = useState([])
@@ -34,6 +35,9 @@ export default function MainContainer(props) {
     <div>
       Main Container
       <Switch>
+        <Route path='/users/:id/products'>
+          <UserProfile />
+        </Route>
         <Route path='products/:id/edit'>
           <EditProduct />
         </Route>
