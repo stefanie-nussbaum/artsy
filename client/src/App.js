@@ -22,13 +22,13 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData)
     setCurrentUser(userData)
-    history.push('/')
+    history.push('/products')
   }
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/products');
   }
 
   const handleLogout = () => {

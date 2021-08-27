@@ -10,7 +10,7 @@ export default function Products(props) {
       Products
       {products.map((product) => {
         <div key={product.id}>
-          <ProductCard product={product} />
+          <ProductCard currentUser={currentUser} product={product} />
         </div>
       })}
     </div>

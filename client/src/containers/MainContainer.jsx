@@ -17,6 +17,7 @@ export default function MainContainer(props) {
     const fetchProducts = async () => {
       const productList = await getAllProducts()
       setProducts(productList)
+      console.log(products)
     }
     fetchProducts()
   }, [])
