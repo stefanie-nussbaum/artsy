@@ -8,12 +8,17 @@ export default function ProductCard(props) {
 
   return (
     <div>
-      <p>{currentUser.email}</p>
-      {products.map((product) => {
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-
-        </div>
+      {/* <p>{currentUser.email}</p> */}
+      {products.map((product, key) => {
+        return (
+          <div key={key}>
+            <img src={product.img_url} alt={product.name} />
+            <h4>{product.name}</h4>
+            <p>{product.price}</p>
+            <p>{product.user?.username}</p>
+            <p>Click to see more</p>
+          </div>
+        )
       })}
       {/* {currentUser?.id === product.user_id && (
         <div>

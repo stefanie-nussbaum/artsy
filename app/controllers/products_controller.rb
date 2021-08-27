@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :update, :destroy]
+  before_action :set_product, only: [:show, :update, :destroy, :find_user]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /products
@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
-    render json: @product, include: :categories
+    render json: @product, :include => :user
   end
 
   # POST /products
@@ -39,6 +39,12 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
   end
+
+  # def find_user
+  #   @user = User.find(@product.user_id)
+
+  #   render json: @user, include: :products
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -8,13 +8,12 @@ export default function Products(props) {
   return (
     <div>
       Products
-      <p>{products[0].name}</p>
+      {/* <p>{products[0].name}</p>
       {products.map((product, key) => {
-        <div key={key}>
-          <p>{product.name}</p>
-          {/* <ProductCard currentUser={currentUser} products={products} /> */}
-        </div>
-      })}
+          <p>{key}</p>
+          <p>{product.name}</p> */}
+      <ProductCard currentUser={currentUser} products={products} />
+
     </div>
   )
 }

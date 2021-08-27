@@ -24,3 +24,8 @@ export const deleteProduct = async (id) => {
   const resp = await api.delete(`/products/${id}`);
   return resp;
 };
+
+// export const getProductUser = async (id) => {
+//   const resp = await api.get(`/products/${id}`);
+//   return resp.data;
+// };
