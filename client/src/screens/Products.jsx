@@ -8,9 +8,11 @@ export default function Products(props) {
   return (
     <div>
       Products
-      {products.map((product) => {
-        <div key={product.id}>
-          <ProductCard currentUser={currentUser} product={product} />
+      <p>{products[0].name}</p>
+      {products.map((product, key) => {
+        <div key={key}>
+          <p>{product.name}</p>
+          {/* <ProductCard currentUser={currentUser} products={products} /> */}
         </div>
       })}
     </div>

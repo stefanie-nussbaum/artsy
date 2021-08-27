@@ -10,7 +10,7 @@ export default function Layout(props) {
     <div>
       <header>
         <h1>Artsy</h1>
-        <Navbar />
+        <Navbar currentUser={currentUser} />
         {props.children}
       </header>
       <Footer />
