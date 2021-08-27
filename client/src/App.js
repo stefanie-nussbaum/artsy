@@ -19,6 +19,7 @@ function App() {
       console.log(currentUser) 
     }
     handleVerify()
+    // eslint-disable-next-line
   }, [])
 
   const handleLogin = async (loginData) => {

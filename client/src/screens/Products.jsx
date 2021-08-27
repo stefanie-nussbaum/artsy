@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
 export default function Products(props) {

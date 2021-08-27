@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import Layout from '../layouts/Layout'
 import ProductDetails from '../screens/ProductDetails'
 import Products from '../screens/Products'
 import { getAllProducts, postProduct } from '../services/products'
@@ -22,6 +21,7 @@ export default function MainContainer(props) {
       console.log(currentUser)
     }
     fetchProducts()
+    // eslint-disable-next-line
   }, [])
 
   const handleCreate = async (formData) => {
