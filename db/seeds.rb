@@ -16,11 +16,19 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-@paintings = Category.create!(name: 'Paintings')
-@drawings = Category.create!(name: 'Drawings')
-@jewelry = Category.create!(name: 'Jewelry')
+@accessories = Category.create!(name: 'Accessories')
 @clothing = Category.create!(name: 'Clothing')
+@digitalArt = Category.create!(name: 'Digital Art')
+@drawings = Category.create!(name: 'Drawings')
+@gifts = Category.create!(name: 'Gifts')
+@jewelry = Category.create!(name: 'Jewelry')
+@paintings = Category.create!(name: 'Paintings')
+@plush = Category.create!(name: 'Plush')
+@prints = Category.create!(name: 'Prints')
 @sculptures = Category.create!(name: 'Sculptures')
+@wallArt = Category.create!(name: 'Wall Art')
+@yarnArt = Category.create!(name: 'Yarn Art')
+@other = Category.create!(name: 'Other')
 
 puts "#{Category.count} categories created"
 
