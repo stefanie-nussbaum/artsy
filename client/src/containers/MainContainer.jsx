@@ -57,7 +57,7 @@ export default function MainContainer(props) {
       Main Container
       <Switch>
         <Route path='/users/:id/products'>
-          <UserProfile />
+          <UserProfile products={products} />
         </Route>
         <Route path='products/:id/edit'>
           <EditProduct handleUpdate={handleUpdate} />
