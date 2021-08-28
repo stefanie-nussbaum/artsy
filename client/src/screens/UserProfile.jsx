@@ -14,7 +14,7 @@ export default function UserProfile(props) {
       }
       return null
     }))
-  }, [])
+  }, [id, products])
 
   return (
     <div>
