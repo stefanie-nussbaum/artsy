@@ -52,7 +52,6 @@ export default function CreateProduct(props) {
                 <option value={category.id}>{category.name}</option>
               )
             })}
-
           </select>
         </label>
         <br />

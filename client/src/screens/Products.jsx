@@ -6,8 +6,8 @@ export default function Products(props) {
   const { currentUser, products } = props
 
   return (
-    <div>
-      Products
+    <div className='container'>
+      <h2>Products</h2>
       {products.map((product, key) => {
         console.log(product)
         return (
