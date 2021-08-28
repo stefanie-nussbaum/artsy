@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import ProductDetails from '../screens/ProductDetails'
 import Products from '../screens/Products'
-import { getAllProducts, postProduct } from '../services/products'
+import { getAllProducts, postProduct, putProduct } from '../services/products'
+import { getAllCategories } from '../services/categories'
 import CreateProduct from '../screens/CreateProduct'
 import EditProduct from '../screens/EditProduct'
 import UserProfile from '../screens/UserProfile'
 
 export default function MainContainer(props) {
   const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState([])
   const history = useHistory()
 
   const { currentUser } = props
@@ -25,11 +27,30 @@ export default function MainContainer(props) {
     // eslint-disable-next-line
   }, [])
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const categoryList = await getAllCategories()
+      setCategories(categoryList)
+    }
+    fetchCategories()
+    // eslint-disable-next-line
+  }, [])
+
   const handleCreate = async (formData) => {
     const productData = await postProduct(formData);
     setProducts((prevState) => [...prevState, productData]);
     history.push('/products');
   }
+
+  const handleUpdate = async (id, formData) => {
+    const productData = await putProduct(id, formData);
+    setProducts((prevState) =>
+      prevState.map((product) => {
+        return product.id === Number(id) ? productData : product;
+      })
+    );
+    history.push('/products');
+  };
 
   return (
     <div>
@@ -39,10 +60,10 @@ export default function MainContainer(props) {
           <UserProfile />
         </Route>
         <Route path='products/:id/edit'>
-          <EditProduct />
+          <EditProduct handleUpdate={handleUpdate} />
         </Route>
         <Route path='products/create'>
-          <CreateProduct handleCreate={handleCreate} />
+          <CreateProduct categories={categories} handleCreate={handleCreate} />
         </Route>
         <Route path='/products/:id'>
           <ProductDetails products={products} />
