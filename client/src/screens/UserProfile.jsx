@@ -25,7 +25,7 @@ export default function UserProfile(props) {
   // }, [id, products])
 
   return (
-    <div>
+    <div className='container'>
       {/* {usersProducts?.map((product, key) => {
         return (
           <div key={key}>
@@ -36,7 +36,7 @@ export default function UserProfile(props) {
 
       {user?.products.map((product, key) => {
         return (
-          <div className='container' key={key}>
+          <div key={key}>
             <ProductCard currentUser={currentUser} product={product} />
           </div>
         )
