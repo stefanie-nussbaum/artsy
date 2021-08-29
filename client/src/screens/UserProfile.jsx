@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
 export default function UserProfile(props) {
-  const [usersProducts, setUsersProducts] = useState([])
+  // const [usersProducts, setUsersProducts] = useState([])
   const [user, setUser] = useState()
-  const { currentUser, products, getUser } = props
+  const { currentUser, getUser } = props
   const { id } = useParams()
 
   useEffect(() => {
@@ -13,16 +13,16 @@ export default function UserProfile(props) {
       setUser(await getUser(id))
     }
     fetchUser()
-  }, [id])
+  }, [id, getUser])
 
-  useEffect(() => {
-    setUsersProducts(products.filter((product) => {
-      if (product?.user_id === id) {
-        return product
-      }
-      return null
-    }))
-  }, [id, products])
+  // useEffect(() => {
+  //   setUsersProducts(products.filter((product) => {
+  //     if (product?.user_id === id) {
+  //       return product
+  //     }
+  //     return null
+  //   }))
+  // }, [id, products])
 
   return (
     <div>

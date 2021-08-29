@@ -31,7 +31,7 @@ export default function CreateProduct(props) {
           Name:
           <input
             type='text'
-            name='username'
+            name='name'
             value={formData.name}
             onChange={handleChange}
           />
@@ -41,7 +41,7 @@ export default function CreateProduct(props) {
           Category:
           <select
             type="text"
-            name="category"
+            name="category_id"
             defaultValue=""
             onChange={handleChange}
             placeholder="category"

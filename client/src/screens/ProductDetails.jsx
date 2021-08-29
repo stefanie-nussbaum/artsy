@@ -22,8 +22,8 @@ export default function ProductDetails(props) {
         <img src={product?.img_url} alt={product?.name} />
       </div>
       <h2>{product?.name}</h2>
-      {currentUser?.id === product?.user_id && (
-        <Link to={`/products/${product?.id}/edit`}>Edit</Link>
+      {currentUser?.id === product?.user.id && (
+        <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
       )}
       <h3>${product?.price}</h3>
       <Link to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link>

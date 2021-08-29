@@ -70,10 +70,10 @@ export default function MainContainer(props) {
         <Route path='/users/:id/products'>
           <UserProfile products={products} getUser={getUser} />
         </Route>
-        <Route path='products/:id/edit'>
+        <Route path='/products/:id/edit'>
           <EditProduct categories={categories} handleUpdate={handleUpdate} />
         </Route>
-        <Route path='products/create'>
+        <Route path='/products/create'>
           <CreateProduct categories={categories} handleCreate={handleCreate} />
         </Route>
         <Route path='/products/:id'>
