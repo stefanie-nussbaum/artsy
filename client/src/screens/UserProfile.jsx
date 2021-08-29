@@ -4,8 +4,16 @@ import ProductCard from '../components/ProductCard'
 
 export default function UserProfile(props) {
   const [usersProducts, setUsersProducts] = useState([])
-  const { currentUser, products } = props
+  const [user, setUser] = useState()
+  const { currentUser, products, getUser } = props
   const { id } = useParams()
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      setUser(await getUser(id))
+    }
+    fetchUser()
+  }, [id])
 
   useEffect(() => {
     setUsersProducts(products.filter((product) => {
@@ -18,9 +26,17 @@ export default function UserProfile(props) {
 
   return (
     <div>
-      {usersProducts?.map((product, key) => {
+      {/* {usersProducts?.map((product, key) => {
         return (
           <div key={key}>
+            <ProductCard currentUser={currentUser} product={product} />
+          </div>
+        )
+      })} */}
+
+      {user?.products.map((product, key) => {
+        return (
+          <div className='container' key={key}>
             <ProductCard currentUser={currentUser} product={product} />
           </div>
         )

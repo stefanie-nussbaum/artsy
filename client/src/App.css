@@ -30,7 +30,7 @@ a {
   display: flex;
   justify-content: center;
   border: rgb(49, 49, 49) solid 2px;
-  position: absolute;
+  position: relative;
   width: 100%;
   left: 0;
   bottom: 0;

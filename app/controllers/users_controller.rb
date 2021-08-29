@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: [:show]
   # before_action :authorize_request, except: :create
 
   # GET /users
@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     render json: @users
   end
 
-  GET /users/1
+  # GET /users/1
   def show
-    render json: @user, except: [:email, :password_digest]
+    render json: @user, except: [:email, :password_digest], include: :products
   end
 
   # POST /users
@@ -42,9 +42,9 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_user
-    #   @user = User.find(params[:id])
-    # end
+    def set_user
+      @user = User.find(params[:id])
+    end
 
     # Only allow a list of trusted parameters through.
     def user_params
