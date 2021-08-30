@@ -5,7 +5,7 @@ a {
 }
 
 img {
-  height: 300px;
+  height: 200px;
   width: auto;
 }
 
@@ -22,6 +22,11 @@ img {
 .App {
   text-align: center;
   background-color: #f4f4f2;
+  background-image: url("/src/images/background.png");
+  background-attachment: fixed;
+  /* background-size: cover; */
+  background-size: 100vw contain;
+  background-repeat: no-repeat;
   /* background-color: #699293; */
   /* background-color: #8c9f9e; */
   /* background-color: #808990; */
@@ -31,7 +36,8 @@ img {
 }
 
 .nav {
-  background-color: #699293;
+  /* background-color: #699293; */
+  padding: 10px 0px;
 }
 
 .nav-links {
@@ -52,8 +58,9 @@ img {
   align-items: center;
   border: black 2px solid;
   margin: 10px 10px;
+  background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
-  height: 500px;
+  height: 400px;
   width: auto;
   min-width: 200px;
 }

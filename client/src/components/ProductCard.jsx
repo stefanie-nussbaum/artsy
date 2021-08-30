@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import Products from '../screens/Products'
 
 export default function ProductCard(props) {
@@ -11,8 +11,7 @@ export default function ProductCard(props) {
         <img src={product.img_url} alt={product.name} />
         <h4>{product.name}</h4>
         <p>${product.price}</p>
-        <Link className='user' to={`/users/${product.user?.id}/products`}><p>{product.user?.username}</p></Link>
-        <p>Click to see more</p>
+        <p>Made by <Link className='user' to={`/users/${product.user?.id}/products`}>{product.user?.username}</Link></p>
       </Link>
     </div>
   )

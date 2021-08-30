@@ -26,6 +26,7 @@ export default function ProductDetails(props) {
         <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
       )}
       <h3>${product?.price}</h3>
+      {/* <p>{product.category.name}</p> */}
       <Link to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link>
       <p>{product?.description}</p>
     </div>
