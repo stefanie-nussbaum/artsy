@@ -84,6 +84,12 @@ img {
   color: #808990;
 }
 
+.detail-img {
+  max-width: 500px;
+  height: auto;
+  margin: 20px;
+}
+
 /* footer */
 
 .footer {

@@ -48,21 +48,25 @@ export default function ProductDetails(props) {
   }
 
   return (
-    <div>
+    <div className='container'>
       <div>
-        <img src={product?.img_url} alt={product?.name} />
+        <img className='detail-img' src={product?.img_url} alt={product?.name} />
       </div>
-      <h2>{product?.name}</h2>
-      {currentUser?.id === product?.user.id && (
-        <div>
-          <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
-          <button onClick={deleteProduct}>Delete</button>
-        </div>
-      )}
-      <h3>${product?.price}</h3>
-      <p>Category: {product?.category.name}</p>
-      <p>Made by <Link className='user' to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link></p>
-      <p>{product?.description}</p>
+      <div>
+        <h2>{product?.name}</h2>
+
+        <h3>${product?.price}</h3>
+        <p>Category: {product?.category.name}</p>
+        <p>Made by <Link className='user' to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link></p>
+        <p>{product?.description}</p>
+        {currentUser?.id === product?.user.id && (
+          <div>
+            <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
+            <button onClick={deleteProduct}>Delete</button>
+          </div>
+        )}
+      </div>
+
     </div>
   )
 }
