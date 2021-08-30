@@ -7,7 +7,21 @@ export default function ProductDetails(props) {
   const [product, setProduct] = useState()
   const [category, setCategory] = useState()
   const { id } = useParams()
-  const { currentUser, handleDelete } = props
+  const { currentUser, handleDelete, products } = props
+
+  // useEffect(() => {
+  //   const fetchProduct = async () => {
+  //     const productData = products.filter((product) => {
+  //       if (product?.id === id) {
+  //         return product
+  //       }
+  //       return null
+  //     })
+  //     setProduct(productData)
+  //   }
+  //   fetchProduct()
+  //   //eslint-disable-next-line
+  // }, [id])
 
   useEffect(() => {
     const fetchProduct = async () => {
