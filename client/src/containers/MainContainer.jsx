@@ -65,13 +65,12 @@ export default function MainContainer(props) {
 
   return (
     <div>
-      Main Container
       <Switch>
         <Route path='/users/:id/products'>
           <UserProfile products={products} getUser={getUser} />
         </Route>
         <Route path='/products/:id/edit'>
-          <EditProduct categories={categories} handleUpdate={handleUpdate} />
+          <EditProduct products={products} categories={categories} handleUpdate={handleUpdate} />
         </Route>
         <Route path='/products/create'>
           <CreateProduct categories={categories} handleCreate={handleCreate} />

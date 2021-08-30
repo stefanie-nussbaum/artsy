@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { getOneProduct } from '../services/products'
 
 export default function EditProduct(props) {
   const [formData, setFormData] = useState({
@@ -8,7 +10,24 @@ export default function EditProduct(props) {
     description: '',
     category_id: '',
   })
-  const { handleUpdate, categories } = props
+  const { handleUpdate, categories, products } = props
+  const { id } = useParams()
+
+  useEffect(() => {
+    const prefillFormData = () => {
+      const productItem = products.find((product) => product.id === Number(id));
+      setFormData({
+        name: productItem?.name,
+        img_url: productItem?.img_url,
+        price: productItem?.price,
+        description: productItem?.description,
+        category_id: productItem?.category_id
+      })
+    }
+    if (products.length) {
+      prefillFormData()
+    }
+  }, [products, id])
 
   const handleChange = (e) => {
     const { name, value } = e.target

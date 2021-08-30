@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { getOneCategory } from '../services/categories'
 import { getOneProduct } from '../services/products'
 
 export default function ProductDetails(props) {
   const [product, setProduct] = useState()
+  const [category, setCategory] = useState()
   const { id } = useParams()
-  const { currentUser } = props
+  const { currentUser, handleDelete } = props
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -14,7 +16,16 @@ export default function ProductDetails(props) {
     }
     fetchProduct()
     //eslint-disable-next-line
-  }, [])
+  }, [id])
+
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const categoryData = await getOneCategory(id)
+      setCategory(categoryData)
+    }
+    fetchCategory()
+    //eslint-disable-next-line
+  }, [id])
 
   return (
     <div>
@@ -23,10 +34,13 @@ export default function ProductDetails(props) {
       </div>
       <h2>{product?.name}</h2>
       {currentUser?.id === product?.user.id && (
-        <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
+        <div>
+          <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
       )}
       <h3>${product?.price}</h3>
-      {/* <p>{product.category.name}</p> */}
+      <p>Category: {category?.name}</p>
       <Link to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link>
       <p>{product?.description}</p>
     </div>
