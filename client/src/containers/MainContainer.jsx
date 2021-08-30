@@ -76,7 +76,7 @@ export default function MainContainer(props) {
           <CreateProduct categories={categories} handleCreate={handleCreate} />
         </Route>
         <Route path='/products/:id'>
-          <ProductDetails products={products} handleDelete={handleDelete} />
+          <ProductDetails currentUser={currentUser} products={products} handleDelete={handleDelete} />
         </Route>
         <Route path='/products'>
           <Products currentUser={currentUser} products={products} />

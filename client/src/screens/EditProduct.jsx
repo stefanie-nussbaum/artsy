@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getOneProduct } from '../services/products'
 
 export default function EditProduct(props) {
+  const [product, setProduct] = useState()
   const [formData, setFormData] = useState({
     name: '',
     img_url: '',
@@ -16,6 +17,7 @@ export default function EditProduct(props) {
   useEffect(() => {
     const prefillFormData = () => {
       const productItem = products.find((product) => product.id === Number(id));
+      // setProduct(productItem)
       setFormData({
         name: productItem?.name,
         img_url: productItem?.img_url,
@@ -42,7 +44,7 @@ export default function EditProduct(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleUpdate(formData);
+          handleUpdate(id, formData);
         }}
       >
         <h3>Create a New Product</h3>
@@ -50,7 +52,7 @@ export default function EditProduct(props) {
           Name:
           <input
             type='text'
-            name='username'
+            name='name'
             value={formData.name}
             onChange={handleChange}
           />
@@ -65,10 +67,15 @@ export default function EditProduct(props) {
             onChange={handleChange}
             placeholder="category"
           >
-            <option value='' disabled >Category</option>
-            {categories.map((category) => {
+            {/* <option value='' disabled >Category</option> */}
+            {categories.map((category, key) => {
+              if (formData?.category_id === category?.id) {
+                return (
+                  <option key={key} value={category?.id} selected>{category.name}</option>
+                )
+              }
               return (
-                <option value={category.id}>{category.name}</option>
+                <option key={key} value={category.id}>{category.name}</option>
               )
             })}
           </select>

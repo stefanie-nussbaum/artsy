@@ -50,7 +50,7 @@ export default function ProductDetails(props) {
       {currentUser?.id === product?.user.id && (
         <div>
           <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
-          <button onClick={handleDelete}>Delete</button>
+          {/* <button onClick={handleDelete(id)}>Delete</button> */}
         </div>
       )}
       <h3>${product?.price}</h3>
