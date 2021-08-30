@@ -80,7 +80,7 @@ export default function MainContainer(props) {
           <ProductDetails currentUser={currentUser} products={products} handleDelete={handleDelete} />
         </Route>
         <Route path='/products'>
-          <Products currentUser={currentUser} products={products} />
+          <Products currentUser={currentUser} products={products} categories={categories} />
         </Route>
       </Switch>
     </div>
