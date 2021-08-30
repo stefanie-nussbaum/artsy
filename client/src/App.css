@@ -23,9 +23,8 @@ img {
   text-align: center;
   background-color: #f4f4f2;
   background-image: url("/src/images/background.png");
-  background-attachment: fixed;
-  /* background-size: cover; */
-  background-size: 100vw contain;
+  /* background-attachment: fixed; */
+  background-size: cover;
   background-repeat: no-repeat;
   /* background-color: #699293; */
   /* background-color: #8c9f9e; */
@@ -36,7 +35,7 @@ img {
 }
 
 .nav {
-  /* background-color: #699293; */
+  /* background-color: #274755; */
   padding: 10px 0px;
 }
 

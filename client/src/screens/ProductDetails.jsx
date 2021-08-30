@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { getOneCategory } from '../services/categories'
 import { getOneProduct } from '../services/products'
 
@@ -8,6 +8,7 @@ export default function ProductDetails(props) {
   const [category, setCategory] = useState()
   const { id } = useParams()
   const { currentUser, handleDelete, products } = props
+  const history = useHistory()
 
   // useEffect(() => {
   //   const fetchProduct = async () => {
@@ -41,6 +42,11 @@ export default function ProductDetails(props) {
     //eslint-disable-next-line
   }, [id])
 
+  const deleteProduct = async () => {
+    const res = await handleDelete(id)
+    history.push('/products')
+  }
+
   return (
     <div>
       <div>
@@ -50,7 +56,7 @@ export default function ProductDetails(props) {
       {currentUser?.id === product?.user.id && (
         <div>
           <Link to={`/products/${product?.id}/edit`}><button>Edit</button></Link>
-          {/* <button onClick={handleDelete(id)}>Delete</button> */}
+          <button onClick={deleteProduct}>Delete</button>
         </div>
       )}
       <h3>${product?.price}</h3>

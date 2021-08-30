@@ -11,7 +11,7 @@ export default function EditProduct(props) {
     description: '',
     category_id: '',
   })
-  const { handleUpdate, categories, products } = props
+  const { handleUpdate, handleDelete, categories, products } = props
   const { id } = useParams()
 
   useEffect(() => {
