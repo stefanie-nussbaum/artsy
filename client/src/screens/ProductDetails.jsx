@@ -54,7 +54,7 @@ export default function ProductDetails(props) {
         </div>
       )}
       <h3>${product?.price}</h3>
-      <p>Category: {category?.name}</p>
+      <p>Category: {product?.category.name}</p>
       <p>Made by <Link className='user' to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link></p>
       <p>{product?.description}</p>
     </div>
