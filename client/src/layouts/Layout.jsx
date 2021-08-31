@@ -1,18 +1,21 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 export default function Layout(props) {
-  const { currentUser } = props
+  const { currentUser, handleLogout } = props
 
   return (
     <div>
-      <header>
-        <h1>Artsy</h1>
-        <Navbar currentUser={currentUser} />
+      <div classname='main-container'>
+        <header className='nav'>
+          <Link to='/products'><h1>Artsy</h1></Link>
+          <Navbar currentUser={currentUser} handleLogout={handleLogout} />
+        </header>
+
         {props.children}
-      </header>
+      </div>
       <Footer />
     </div>
   )
