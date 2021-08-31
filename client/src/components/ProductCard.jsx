@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // import Products from '../screens/Products'
 
 export default function ProductCard(props) {
-  const { product, currentUser } = props
+  const { product } = props
 
   return (
     <div className='card'>

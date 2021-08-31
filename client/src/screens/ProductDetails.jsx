@@ -43,7 +43,7 @@ export default function ProductDetails(props) {
   }, [id])
 
   const deleteProduct = async () => {
-    const res = await handleDelete(id)
+    await handleDelete(id)
     history.push('/products')
   }
 

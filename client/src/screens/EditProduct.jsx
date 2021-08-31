@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getOneProduct } from '../services/products'
+// import { getOneProduct } from '../services/products'
 
 export default function EditProduct(props) {
-  const [product, setProduct] = useState()
+  // const [product, setProduct] = useState()
   const [formData, setFormData] = useState({
     name: '',
     img_url: '',
@@ -11,7 +11,7 @@ export default function EditProduct(props) {
     description: '',
     category_id: '',
   })
-  const { handleUpdate, handleDelete, categories, products } = props
+  const { handleUpdate, categories, products } = props
   const { id } = useParams()
 
   useEffect(() => {

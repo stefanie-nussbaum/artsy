@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import { getAllCategories } from '../services/categories'
+// import { getAllCategories } from '../services/categories'
 
 export default function Products(props) {
   const [filteredProducts, setFilteredProducts] = useState([])
@@ -11,6 +11,7 @@ export default function Products(props) {
   useEffect(() => {
     setFilteredProducts(products)
     console.log(filteredProducts)
+    // eslint-disable-next-line
   }, [products])
 
   // useEffect(() => {
@@ -37,7 +38,7 @@ export default function Products(props) {
   }
 
   return (
-    <div className='container'>
+    <div>
       <h2>Products</h2>
       <select
         type="text"
@@ -53,15 +54,17 @@ export default function Products(props) {
           )
         })}
       </select>
-      {filteredProducts.map((product, key) => {
-        console.log(product)
-        return (
-          <div key={key}>
-            <ProductCard currentUser={currentUser} product={product} />
-          </div>
-        )
-      })}
+      <div className='container'>
 
+        {filteredProducts.map((product, key) => {
+          console.log(product)
+          return (
+            <div key={key}>
+              <ProductCard currentUser={currentUser} product={product} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
