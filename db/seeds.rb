@@ -15,7 +15,7 @@ User.destroy_all
 # create users
 
 @admin = User.create!(username: 'testusername', email: 'test@email.com', password: 'testpassword')
-@vangogh = User.create!(username: 'therealvangogh', email: 'therealvangogh@email.com', password: 'therealvangogh')
+@therealvangogh = User.create!(username: 'therealvangogh', email: 'therealvangogh@email.com', password: 'therealvangogh')
 @sewcool = User.create!(username: 'sewcool', email: 'sewcool@email.com', password: 'sewcool')
 @imakeart23 = User.create!(username: 'imakeart23', email: 'imakeart23@email.com', password: 'imakeart23')
 
