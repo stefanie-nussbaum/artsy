@@ -48,6 +48,7 @@ export default function CreateProduct(props) {
               defaultValue=""
               onChange={handleChange}
               placeholder="category"
+              className='category'
             >
               <option value='' disabled >Category</option>
               {categories.map((category) => {

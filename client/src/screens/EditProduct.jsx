@@ -40,79 +40,83 @@ export default function EditProduct(props) {
   }
 
   return (
-    <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleUpdate(id, formData);
-        }}
-      >
-        <h3>Create a New Product</h3>
-        <label>
-          Name:
-          <input
-            type='text'
-            name='name'
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Category:
-          <select
-            type="text"
-            name="category"
-            defaultValue=""
-            onChange={handleChange}
-            placeholder="category"
-          >
-            {/* <option value='' disabled >Category</option> */}
-            {categories.map((category, key) => {
-              if (formData?.category_id === category?.id) {
+    <div className='main-container'>
+      <div className='container'>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleUpdate(id, formData);
+          }}
+          className='container'
+        >
+          <h3>Update Product</h3>
+          <label>
+            Name:
+            <input
+              type='text'
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Category:
+            <select
+              type="text"
+              name="category"
+              defaultValue={formData.category_id}
+              onChange={handleChange}
+              placeholder="category"
+              className='category'
+            >
+              {/* <option value='' disabled >Category</option> */}
+              {categories.map((category, key) => {
+                if (formData?.category_id === category?.id) {
+                  return (
+                    <option key={key} value={category?.id} selected>{category.name}</option>
+                  )
+                }
                 return (
-                  <option key={key} value={category?.id} selected>{category.name}</option>
+                  <option key={key} value={category.id}>{category.name}</option>
                 )
-              }
-              return (
-                <option key={key} value={category.id}>{category.name}</option>
-              )
-            })}
-          </select>
-        </label>
-        <br />
-        <label>
-          Image URL:
-          <input
-            type='text'
-            name='img_url'
-            value={formData.img_url}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Price:
-          <input
-            type='text'
-            name='price'
-            value={formData.price}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Description:
-          <textarea
-            type='text'
-            name='description'
-            value={formData.description}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button>Submit</button>
-      </form>
+              })}
+            </select>
+          </label>
+          <br />
+          <label>
+            Image URL:
+            <input
+              type='text'
+              name='img_url'
+              value={formData.img_url}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Price:
+            <input
+              type='text'
+              name='price'
+              value={formData.price}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Description:
+            <textarea
+              type='text'
+              name='description'
+              value={formData.description}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }

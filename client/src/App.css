@@ -56,10 +56,16 @@ input {
   background-color: #f4f4f2;
 }
 
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 select {
-  width: 80%;
+  min-width: 200px;
   padding: 10px;
-  height: 20px;
+  /* height: 20px; */
   font-size: 16px;
   border: solid black 2px;
   border-radius: 10px;
@@ -165,6 +171,10 @@ button {
   justify-items: center;
 }
 
+.category {
+  margin: 0px 15px 0px 0px;
+}
+
 .detail-img {
   max-width: 500px;
   height: auto;
@@ -206,7 +216,7 @@ button {
 }
 
 .logout {
-  margin: 5px;
+  margin: 5px 0px 0px 0px;
 }
 
 @media only screen and (max-width: 1200px) {
