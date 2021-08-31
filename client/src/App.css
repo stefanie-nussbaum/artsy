@@ -16,6 +16,7 @@ h4 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  color: #274755;
 }
 
 img {
@@ -25,10 +26,14 @@ img {
 
 form {
   max-width: 70%;
-  background-color: #f4f4f266;
+  background-color: #f4f4f2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border: #274755 solid 2px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: #808990 10px 10px 5px;
+  /* justify-content: center; */
 }
 
 label {
@@ -44,6 +49,7 @@ input {
   border-radius: 10px;
   background: none;
   outline: none;
+  background-color: #f4f4f2;
 }
 
 select {
@@ -65,8 +71,12 @@ button {
   justify-content: center;
   width: 100px;
   padding: 10px;
-  height: 20px;
+  height: 30px;
   font-size: 16px;
+  border: #274755 solid black;
+  border-radius: 5px;
+  background-color: #274755;
+  color: #f4f4f2;
 }
 
 .main-container {
@@ -100,9 +110,9 @@ button {
   /* justify-content: end; */
 }
 
-.nav-links {
+/* .nav-links {
   color: white;
-}
+} */
 
 .container {
   display: flex;
@@ -147,6 +157,15 @@ button {
   background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
   max-width: 500px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  /* background-color: #699293; */
 }
 
 .detail-img {
@@ -237,5 +256,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
