@@ -7,6 +7,7 @@ a {
 h1 {
   color: #274755;
   font-size: 60px;
+  margin: 20px;
 }
 
 h1,
@@ -17,6 +18,10 @@ h4 {
   flex-direction: column;
   flex-wrap: nowrap;
   color: #274755;
+}
+
+header {
+  background-color: #f4f4f266;
 }
 
 img {
@@ -33,7 +38,6 @@ form {
   border-radius: 10px;
   padding: 20px;
   box-shadow: #808990 10px 10px 5px;
-  /* justify-content: center; */
 }
 
 label {
@@ -59,8 +63,6 @@ select {
   font-size: 16px;
   border: solid black 2px;
   border-radius: 10px;
-  /* background: none;
-  outline: none; */
 }
 
 button {
@@ -69,7 +71,6 @@ button {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  /* width: 100px; */
   padding: 10px;
   height: 30px;
   font-size: 16px;
@@ -88,31 +89,17 @@ button {
   text-align: center;
   background-color: #f4f4f2;
   background-image: url("/src/images/background-med.png");
-  /* background-attachment: fixed; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: #699293; */
-  /* background-color: #8c9f9e; */
-  /* background-color: #808990; */
-  /* background-color: #274755; */
-  /* color: #f4f4f2; */
-  /* min-height: 100vh; */
 }
 
 .nav {
-  background-color: #f4f4f266;
-  /* opacity: 0.5; */
   padding: 10px 0px;
   display: flex;
-  justify-items: flex-end;
+  justify-content: flex-end;
   align-items: flex-end;
-  /* justify-content: end; */
 }
-
-/* .nav-links {
-  color: white;
-} */
 
 .container {
   display: flex;
@@ -143,7 +130,6 @@ button {
 .container2 {
   display: flex;
   justify-content: center;
-  /* min-height: 100vh; */
 }
 
 .card2 {
@@ -164,7 +150,6 @@ button {
   align-items: center;
   flex-wrap: wrap;
   justify-items: center;
-  /* background-color: #699293; */
 }
 
 .detail-img {
@@ -178,13 +163,10 @@ button {
   border: #274755 solid 2px;
 }
 
-/* footer */
-
 .footer {
   display: flex;
   justify-content: center;
   background-color: #f4f4f266;
-  /* border: #699293 solid 2px; */
   position: relative;
   width: 100%;
   left: 0;
@@ -216,16 +198,6 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
   }
-
-  /* .container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  .card {
-    width: 80vw;
-    height: auto;
-  } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -241,7 +213,7 @@ button {
   }
 
   .container {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
   }
