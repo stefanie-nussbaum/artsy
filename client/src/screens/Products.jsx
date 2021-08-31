@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 // import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 // import { getAllCategories } from '../services/categories'
 
 export default function Products(props) {
-  const [filteredProducts, setFilteredProducts] = useState([])
-  const [filterByCategory, setFilterByCategory] = useState()
-  const { currentUser, products, categories } = props
+  // const [filteredProducts, setFilteredProducts] = useState([])
+  // const [filterByCategory, setFilterByCategory] = useState()
+  const { currentUser, products } = props
 
-  useEffect(() => {
-    setFilteredProducts(products)
-    console.log(filteredProducts)
-    // eslint-disable-next-line
-  }, [products])
+  // useEffect(() => {
+  //   setFilteredProducts(products)
+  //   console.log(filteredProducts)
+  //   // eslint-disable-next-line
+  // }, [products])
 
   // useEffect(() => {
   //   if (filterByCategory !== '') {
@@ -28,19 +28,19 @@ export default function Products(props) {
   //   }
   // }, [filterByCategory, products, categories])
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFilterByCategory((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
-    console.log(filterByCategory)
-  }
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target
+  //   setFilterByCategory((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }))
+  //   console.log(filterByCategory)
+  // }
 
   return (
     <div className='main-container'>
       <h2>Products</h2>
-      <select
+      {/* <select
         type="text"
         name="category_id"
         defaultValue=''
@@ -53,10 +53,10 @@ export default function Products(props) {
             <option value={category.id}>{category.name}</option>
           )
         })}
-      </select>
+      </select> */}
       <div className='container'>
 
-        {filteredProducts.map((product, key) => {
+        {products.map((product, key) => {
           console.log(product)
           return (
             <div key={key}>

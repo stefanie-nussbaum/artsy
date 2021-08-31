@@ -99,14 +99,14 @@ img {
   max-width: 500px;
 }
 
-.user {
-  color: #808990;
-}
-
 .detail-img {
   max-width: 500px;
   height: auto;
   margin: 20px;
+}
+
+.details {
+  background-color: #f4f4f266;
 }
 
 /* footer */
@@ -137,12 +137,11 @@ img {
   box-shadow: none;
 }
 
-@media only screen and (max-width: 1200px) {
-  /* img {
-    width: 70vw;
-    height: auto;
-  } */
+.user {
+  color: #808990;
+}
 
+@media only screen and (max-width: 1200px) {
   .App {
     background-image: url(./images/mobile.png);
     background-size: cover;
