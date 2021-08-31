@@ -63,6 +63,19 @@ select {
   font-size: 16px;
   border: solid black 2px;
   border-radius: 10px;
+  background: none;
+  outline: none;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  height: 50px;
+  font-size: 16px;
+  border: solid black 2px;
+  border-radius: 10px;
+  background: none;
+  outline: none;
 }
 
 button {
@@ -192,6 +205,10 @@ button {
   color: #808990;
 }
 
+.logout {
+  margin: 5px;
+}
+
 @media only screen and (max-width: 1200px) {
   .App {
     background-image: url(./images/mobile.png);
@@ -216,6 +233,12 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .card {

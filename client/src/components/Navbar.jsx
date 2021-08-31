@@ -10,7 +10,7 @@ export default function Navbar(props) {
           <Link className='nav-link' to='/products'><button>Shop Products</button></Link>
           <Link className='nav-link' to='/products/create'><button>Create Product</button></Link>
           <Link className='nav-link' to={`/users/${currentUser.id}/products`}><button>{currentUser.username}</button></Link>
-          <Link><button onClick={handleLogout}>Logout</button></Link>
+          <button className='logout' onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <div className='container2'>

@@ -40,12 +40,6 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
-  # def find_user
-  #   @user = User.find(@product.user_id)
-
-  #   render json: @user, include: :products
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -58,8 +52,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      # @category = Category.find_by(request.body.category)
-      # set_category
       params.require(:product).permit(:name, :description, :price, :img_url, :category_id)
     end
 end

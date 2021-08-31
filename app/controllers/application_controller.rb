@@ -24,9 +24,4 @@ class ApplicationController < ActionController::API
     end
   end
 
-  # #find a category here?
-  # def find_category
-
-  # end
-
 end

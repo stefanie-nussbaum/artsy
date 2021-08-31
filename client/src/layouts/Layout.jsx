@@ -8,7 +8,7 @@ export default function Layout(props) {
 
   return (
     <div>
-      <div classname='container'>
+      <div >
         <header>
           <Link to='/products'><h1>Artsy</h1></Link>
 
