@@ -26,7 +26,7 @@ export default function Login(props) {
           }}
           className='container'
         >
-          <h3>Login</h3>
+          <h2>Login</h2>
           <input
             type='text'
             name='username'

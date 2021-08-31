@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom'
 export default function Navbar(props) {
   const { currentUser, handleLogout } = props
   return (
-    <div className='nav'>
+    <div>
       {currentUser ? (
-        <div>
-
-          <Link className='nav-link' to='/products'>Shop Products</Link>
-          <Link className='nav-link' to='/products/create'>Create Product</Link>
-          <Link className='nav-link' to={`/users/${currentUser.id}/products`}>{currentUser.username}</Link>
-          <button onClick={handleLogout}>Logout</button>
+        <div className='container2'>
+          <Link className='nav-link' to='/products'><button>Shop Products</button></Link>
+          <Link className='nav-link' to='/products/create'><button>Create Product</button></Link>
+          <Link className='nav-link' to={`/users/${currentUser.id}/products`}><button>{currentUser.username}</button></Link>
+          <Link><button onClick={handleLogout}>Logout</button></Link>
         </div>
       ) : (
-        <div>
-          <Link className='nav-link' to='/products'>Shop Products</Link>
-          <Link className='nav-link' to='/login'>Login/Register</Link>
+        <div className='container2'>
+          <Link className='nav-link' to='/products'><button>Shop Products</button></Link>
+          <Link className='nav-link' to='/login'><button>Login/Register</button></Link>
         </div>
       )}
     </div>

@@ -69,7 +69,7 @@ button {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  /* width: 100px; */
   padding: 10px;
   height: 30px;
   font-size: 16px;
@@ -137,8 +137,7 @@ button {
 }
 
 .card:hover {
-  transform: scale(1.2);
-  border: 5px solid #699293;
+  transform: scale(1.1);
 }
 
 .container2 {
