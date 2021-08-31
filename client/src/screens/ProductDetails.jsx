@@ -55,7 +55,6 @@ export default function ProductDetails(props) {
         </div>
         <div classname='details'>
           <h2>{product?.name}</h2>
-
           <h3>${product?.price}</h3>
           <p>Category: {product?.category.name}</p>
           <p>Made by <Link className='user' to={`/users/${product?.user_id}/products`}>{product?.user.username}</Link></p>
@@ -67,7 +66,6 @@ export default function ProductDetails(props) {
             </div>
           )}
         </div>
-
       </div>
     </div>
   )
