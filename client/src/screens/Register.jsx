@@ -18,48 +18,45 @@ export default function Register(props) {
   }
 
   return (
-    <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleRegister(formData);
-        }}
-      >
-        <h3>Register</h3>
-        <label>
-          Username:
+    <div className='main-container'>
+      <div className='container'>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleRegister(formData);
+          }}
+          className='container'
+        >
+          <h2>Register</h2>
           <input
             type='text'
             name='username'
             value={formData.username}
             onChange={handleChange}
+            placeholder='Username'
           />
-        </label>
-        <br />
-        <label>
-          Email:
+          <br />
           <input
             type='text'
             name='email'
             value={formData.email}
             onChange={handleChange}
+            placeholder='Email'
           />
-        </label>
-        <br />
-        <label>
-          Password:
+          <br />
           <input
             type='password'
             name='password'
             value={formData.password}
             onChange={handleChange}
+            placeholder='Password'
           />
-        </label>
-        <br />
-        <Link to='/login'>Already have an account? Log In!</Link>
-        <br />
-        <button>Submit</button>
-      </form>
+          <br />
+          <Link to='/login'><h4>Already have an account? Log In!</h4></Link>
+          <br />
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }
