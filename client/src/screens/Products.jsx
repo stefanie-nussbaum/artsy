@@ -38,7 +38,7 @@ export default function Products(props) {
   }
 
   return (
-    <div>
+    <div className='main-container'>
       <h2>Products</h2>
       <select
         type="text"

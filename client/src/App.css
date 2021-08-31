@@ -72,13 +72,31 @@ img {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  border: black 2px solid;
+  border: #274755 2px solid;
   margin: 10px 10px;
   background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
   height: 400px;
   width: auto;
   min-width: 200px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  /* min-height: 100vh; */
+}
+
+.card2 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: #274755 2px solid;
+  margin: 20px 10px;
+  background-color: #f4f4f2;
+  box-shadow: #808990 10px 10px 5px;
+  max-width: 500px;
 }
 
 .user {

@@ -8,6 +8,7 @@ import CreateProduct from '../screens/CreateProduct'
 import EditProduct from '../screens/EditProduct'
 import UserProfile from '../screens/UserProfile'
 import { getOneUser } from '../services/users'
+import Landing from '../screens/Landing'
 
 export default function MainContainer(props) {
   const [products, setProducts] = useState([])
@@ -80,6 +81,9 @@ export default function MainContainer(props) {
         </Route>
         <Route path='/products'>
           <Products currentUser={currentUser} products={products} categories={categories} />
+        </Route>
+        <Route path='/'>
+          <Landing currentUser={currentUser} />
         </Route>
       </Switch>
     </div>
