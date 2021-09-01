@@ -37,18 +37,12 @@ export default function MainContainer(props) {
 
   const handleCreate = async (formData) => {
     await postProduct(formData)
-    // setProducts((prevState) => [...prevState, productData])
     setProducts(await getAllProducts())
     history.push('/products')
   }
 
   const handleUpdate = async (id, formData) => {
     await putProduct(id, formData)
-    // setProducts((prevState) =>
-    //   prevState.map((product) => {
-    //     return product.id === Number(id) ? productData : product
-    //   })
-    // )
     setProducts(await getAllProducts())
     history.push('/products');
   }
