@@ -182,8 +182,14 @@ button {
 }
 
 .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-info {
   background-color: #f4f4f266;
-  border: #274755 solid 2px;
+  /* border: #274755 solid 2px; */
+  max-width: 40vw;
 }
 
 .footer {
@@ -224,6 +230,12 @@ button {
     background-image: url(./images/mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .detail-info {
+    background-color: #f4f4f266;
+    /* border: #274755 solid 2px; */
+    max-width: 80vw;
   }
 }
 
