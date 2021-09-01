@@ -18,6 +18,7 @@
 <br>
 
 ## Overview
+[Artsy](https://artsy-buy-and-sell-art.netlify.app/)
 
 _**Artsy** is an app/website made for finding, buying, and selling various types of art. Users will be able to Upload, edit, and delete their own creations as well as search for and favorite other users' art. Artsy is inspired by the popular art commerce app Etsy._
 
@@ -109,25 +110,24 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Models/Controllers    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Backend routes    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Seed Data    |    H     |     2 hrs      |      hrs     |    TBD    |
-| User authentication    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Create frontend setup    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Display products view    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Product details view    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Create product view    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Edit product view    |    H     |     1 hrs      |      hrs     |    TBD    |
-| Register view    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Login view |    H     |     1 hrs      |      hrs     |     TBD     |
-| Layout/Navbar/Footer    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Basic CSS styling    |    H     |     3 hrs      |      hrs     |    TBD    |
-| Style products display    |    M     |     3 hrs      |      hrs     |    TBD    |
-| Style product details    |    M     |     3 hrs      |      hrs     |    TBD    |
-| Style layout    |    M     |     2 hrs      |      hrs     |    TBD    |
-| PMVP favorites    |    L     |     3 hrs      |      hrs     |    TBD    |
-| PMVP dark/light mode    |    L     |     3 hrs      |      hrs     |    TBD    |
-| TOTAL               |          |     43 hrs      |      hrs     |     TBD     |
+| Models/Controllers    |    H     |     2 hrs      |      1hrs     |    1hrs    |
+| Backend routes    |    H     |     3 hrs      |      4hrs     |    4hrs    |
+| Seed Data    |    H     |     2 hrs      |      3hrs     |    3hrs   |
+| User authentication    |    H     |     2 hrs      |      2hrs     |    2hrs    |
+| Create frontend setup    |    H     |     2 hrs      |      4hrs     |    4hrs    |
+| Display products view    |    H     |     3 hrs      |      3hrs     |    3hrs    |
+| Product details view    |    H     |     3 hrs      |      3hrs     |    3hrs    |
+| Create product view    |    H     |     2 hrs      |      2hrs     |    2hrs    |
+| Edit product view    |    H     |     1 hrs      |      1hrs     |    1hrs    |
+| Register view    |    H     |     2 hrs      |      2hrs     |    2hrs    |
+| Login view |    H     |     1 hrs      |      2hrs     |     2hrs     |
+| Layout/Navbar/Footer    |    H     |     3 hrs      |      2hrs     |    2hrs    |
+| Basic CSS styling    |    H     |     3 hrs      |      5hrs     |    5hrs    |
+| Style products display    |    M     |     3 hrs      |      3hrs     |    3hrs   |
+| Style product details    |    M     |     3 hrs      |      3hrs     |    3hrs    |
+| Style layout    |    M     |     2 hrs      |      3hrs     |    3hrs    |
+| Other debugging/cleanup    |    M     |     N/A      |      5hrs     |    5hrs    |
+| TOTAL               |          |     43 hrs      |      48hrs     |     48hrs     |
 
 
 <br>
@@ -153,8 +153,31 @@ src
 ***
 
 ## Code Showcase
-
+```
+return (
+    <div className='main-container'>
+      {currentUser?.id === user?.id ? (
+        <h2>Your Profile</h2>
+      ) : (
+        <h2>{`Welcome to ${user?.username}'s profile!`}</h2>
+      )}
+      <h3>{user?.username}'s Products</h3>
+      <div className='container'>
+        {user?.products.map((product, key) => {
+          return (
+            <div key={key}>
+              <ProductCard currentUser={currentUser} product={product} />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+  ```
+  This is code used to show only products connected to one user in my user profile screen. I am proud of this code because this is something I have wanted to do on past projects but it would have been very complicated. Using Ruby on rails makes associations very easy to use to get the data you want and made this finally possible to me.
 
 
 ## Code Issues & Resolutions
+
+
 
