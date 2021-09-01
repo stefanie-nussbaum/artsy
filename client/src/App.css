@@ -31,6 +31,7 @@ img {
 
 form {
   max-width: 70%;
+  /* width: 50%; */
   background-color: #f4f4f2;
   display: flex;
   flex-direction: column;
@@ -157,6 +158,7 @@ button {
   justify-content: center;
   align-items: center;
   border: #274755 2px solid;
+  border-radius: 20px;
   margin: 20px 10px;
   background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
