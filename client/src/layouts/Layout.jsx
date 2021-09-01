@@ -11,12 +11,10 @@ export default function Layout(props) {
       <div >
         <header>
           <Link to='/products'><h1>Artsy</h1></Link>
-
           <div className='nav'>
             <Navbar currentUser={currentUser} handleLogout={handleLogout} />
           </div>
         </header>
-
         {props.children}
       </div>
       <Footer />

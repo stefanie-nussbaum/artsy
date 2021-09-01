@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import { getOneProduct } from '../services/products'
+
 
 export default function EditProduct(props) {
-  // const [product, setProduct] = useState()
   const [formData, setFormData] = useState({
     name: '',
     img_url: '',
@@ -17,7 +16,6 @@ export default function EditProduct(props) {
   useEffect(() => {
     const prefillFormData = () => {
       const productItem = products.find((product) => product.id === Number(id));
-      // setProduct(productItem)
       setFormData({
         name: productItem?.name,
         img_url: productItem?.img_url,
@@ -70,7 +68,6 @@ export default function EditProduct(props) {
               placeholder="category"
               className='category'
             >
-              {/* <option value='' disabled >Category</option> */}
               {categories.map((category, key) => {
                 if (formData?.category_id === category?.id) {
                   return (
