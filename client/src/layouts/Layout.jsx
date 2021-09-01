@@ -8,10 +8,13 @@ export default function Layout(props) {
 
   return (
     <div>
-      <div classname='main-container'>
-        <header className='nav'>
+      <div >
+        <header>
           <Link to='/products'><h1>Artsy</h1></Link>
-          <Navbar currentUser={currentUser} handleLogout={handleLogout} />
+
+          <div className='nav'>
+            <Navbar currentUser={currentUser} handleLogout={handleLogout} />
+          </div>
         </header>
 
         {props.children}

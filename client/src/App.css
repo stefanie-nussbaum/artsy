@@ -7,6 +7,7 @@ a {
 h1 {
   color: #274755;
   font-size: 60px;
+  margin: 20px;
 }
 
 h1,
@@ -16,6 +17,11 @@ h4 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  color: #274755;
+}
+
+header {
+  background-color: #f4f4f266;
 }
 
 img {
@@ -23,11 +29,76 @@ img {
   width: auto;
 }
 
-/* button {
+form {
+  max-width: 70%;
+  /* width: 50%; */
+  background-color: #f4f4f2;
+  display: flex;
+  flex-direction: column;
+  border: #274755 solid 2px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: #808990 10px 10px 5px;
+}
+
+label {
+  justify-content: start;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  height: 20px;
+  font-size: 16px;
+  border: solid black 2px;
+  border-radius: 10px;
+  background: none;
+  outline: none;
+  background-color: #f4f4f2;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+select {
+  min-width: 200px;
+  padding: 10px;
+  /* height: 20px; */
+  font-size: 16px;
+  border: solid black 2px;
+  border-radius: 10px;
+  background: none;
+  outline: none;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  height: 50px;
+  font-size: 16px;
+  border: solid black 2px;
+  border-radius: 10px;
+  background: none;
+  outline: none;
+}
+
+button {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-} */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 30px;
+  font-size: 16px;
+  border: #274755 solid black;
+  border-radius: 5px;
+  background-color: #274755;
+  color: #f4f4f2;
+}
 
 .main-container {
   min-height: 100vh;
@@ -38,26 +109,16 @@ img {
   text-align: center;
   background-color: #f4f4f2;
   background-image: url("/src/images/background-med.png");
-  /* background-attachment: fixed; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: #699293; */
-  /* background-color: #8c9f9e; */
-  /* background-color: #808990; */
-  /* background-color: #274755; */
-  /* color: #f4f4f2; */
-  /* min-height: 100vh; */
 }
 
 .nav {
-  background-color: #f4f4f266;
-  /* opacity: 0.5; */
   padding: 10px 0px;
-}
-
-.nav-links {
-  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .container {
@@ -73,7 +134,8 @@ img {
   justify-content: center;
   align-items: center;
   border: #274755 2px solid;
-  margin: 10px 10px;
+  border-radius: 20px;
+  margin: 20px 10px;
   background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
   height: 400px;
@@ -81,10 +143,13 @@ img {
   min-width: 200px;
 }
 
+.card:hover {
+  transform: scale(1.1);
+}
+
 .container2 {
   display: flex;
   justify-content: center;
-  /* min-height: 100vh; */
 }
 
 .card2 {
@@ -93,10 +158,23 @@ img {
   justify-content: center;
   align-items: center;
   border: #274755 2px solid;
+  border-radius: 20px;
   margin: 20px 10px;
   background-color: #f4f4f2;
   box-shadow: #808990 10px 10px 5px;
   max-width: 500px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.category {
+  margin: 0px 15px 0px 0px;
 }
 
 .detail-img {
@@ -106,16 +184,20 @@ img {
 }
 
 .details {
-  background-color: #f4f4f266;
+  display: flex;
+  flex-direction: column;
 }
 
-/* footer */
+.detail-info {
+  background-color: #f4f4f266;
+  /* border: #274755 solid 2px; */
+  max-width: 40vw;
+}
 
 .footer {
   display: flex;
   justify-content: center;
   background-color: #f4f4f266;
-  /* border: #699293 solid 2px; */
   position: relative;
   width: 100%;
   left: 0;
@@ -141,6 +223,10 @@ img {
   color: #808990;
 }
 
+.logout {
+  margin: 5px 0px 0px 0px;
+}
+
 @media only screen and (max-width: 1200px) {
   .App {
     background-image: url(./images/mobile.png);
@@ -148,15 +234,11 @@ img {
     background-repeat: no-repeat;
   }
 
-  /* .container {
-    flex-direction: column;
-    flex-wrap: nowrap;
+  .detail-info {
+    background-color: #f4f4f266;
+    /* border: #274755 solid 2px; */
+    max-width: 80vw;
   }
-
-  .card {
-    width: 80vw;
-    height: auto;
-  } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -172,13 +254,26 @@ img {
   }
 
   .container {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .card {
     width: 80vw;
     height: auto;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

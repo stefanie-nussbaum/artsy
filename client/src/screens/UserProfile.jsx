@@ -25,15 +25,22 @@ export default function UserProfile(props) {
   // }, [id, products])
 
   return (
-    <div className='container'>
-
-      {user?.products.map((product, key) => {
-        return (
-          <div key={key}>
-            <ProductCard currentUser={currentUser} product={product} />
-          </div>
-        )
-      })}
+    <div className='main-container'>
+      {currentUser?.id === user?.id ? (
+        <h2>Your Profile</h2>
+      ) : (
+        <h2>{`Welcome to ${user?.username}'s profile!`}</h2>
+      )}
+      <h3>{user?.username}'s Products</h3>
+      <div className='container'>
+        {user?.products.map((product, key) => {
+          return (
+            <div key={key}>
+              <ProductCard currentUser={currentUser} product={product} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
